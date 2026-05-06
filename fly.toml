@@ -1,0 +1,10 @@
+app = "order tracking barcode app"
+primary_region = "bom"
+
+[build]
+
+[env]
+
+[http_service]
+  internal_port = 61560
+  force_https = true
