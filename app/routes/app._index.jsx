@@ -24,7 +24,7 @@ async function fetchOrders(admin) {
           }
           fulfillments(first: 1) {
             createdAt
-            trackingInfo(first: 1) {
+            trackingInfo {
               number
               company
             }
@@ -35,6 +35,8 @@ async function fetchOrders(admin) {
   `);
 
   const responseJson = await response.json();
+
+  console.log(JSON.stringify(responseJson, null, 2));
 
   return {
     orders: responseJson.data.orders.nodes,
